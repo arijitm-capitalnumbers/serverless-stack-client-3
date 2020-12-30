@@ -20,6 +20,7 @@ export default function Home() {
 
       try {
         const notes = await loadNotes();
+        console.log(notes);
         setNotes(notes);
       } catch (e) {
         onError(e);
