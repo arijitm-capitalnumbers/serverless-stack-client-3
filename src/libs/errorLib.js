@@ -7,17 +7,7 @@ export function initSentry() {
     return;
   }
 
-  Sentry.init({
-    dsn: "https://dee2822295784a889cdfb4c0a0d1c675@o507973.ingest.sentry.io/5599833",
-    autoSessionTracking: true,
-    integrations: [
-      new Integrations.BrowserTracing(),
-    ],
-
-    // We recommend adjusting this value in production, or using tracesSampler
-    // for finer control
-    tracesSampleRate: 1.0,
-  });
+  Sentry.init({dsn: "https://dee2822295784a889cdfb4c0a0d1c675@o507973.ingest.sentry.io/5599833"});
 }
 
 export function logError(error, errorInfo = null) {
